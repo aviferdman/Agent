@@ -1,0 +1,27 @@
+# Normalize all text files, auto-detect
+* text=auto
+
+# Enforce LF for source code
+*.py text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+Dockerfile text eol=lf
+
+# Binary files (no diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.exe binary
+*.pkl binary
+
+# Optional linguist hints (uncomment as needed)
+# extension/dist/* linguist-generated
+# extension/node_modules/* linguist-vendored

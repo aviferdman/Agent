@@ -1,0 +1,10 @@
+[azure_openai]
+endpoint = "https://YOUR-AOAI-RESOURCE.openai.azure.com"
+api_key = ""  # leave blank; set AZURE_OPENAI_KEY environment variable for runtime
+model = "gpt-4o"
+api_version = "2024-06-01"
+
+[memory]
+enabled = true
+max_messages = 40
+max_tokens = 2400

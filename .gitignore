@@ -1,0 +1,92 @@
+# ---- Python bytecode / cache ----
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+.env
+.env.*
+.python-version
+
+# ---- Packaging / build ----
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ---- Test / coverage ----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.cache/
+
+# ---- Type checking / lint caches ----
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.dmypy.json
+
+# ---- Benchmarks / profiling ----
+.benchmarks/
+
+# ---- Logs ----
+logs/
+*.log
+
+# ---- Local config / secrets ----
+config.toml
+# Provide example instead
+
+# ---- Node / TypeScript (extension/) ----
+extension/node_modules/
+extension/dist/
+extension/build/
+extension/.turbo/
+extension/.parcel-cache/
+extension/.eslintcache
+extension/coverage/
+extension/.nyc_output/
+
+# Root-level node (if used)
+node_modules/
+dist/
+build/
+
+# ---- Editors / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*.code-workspace
+.history/
+
+# ---- OS / misc ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Archives / dumps ----
+*.tar
+*.tar.gz
+*.zip
+*.7z
+*.bak
+*.orig
+
+# ---- Azure / temp ----
+.azure/
+*.publishsettings
+
+# ---- FastAPI / Uvicorn reload artifacts ----
+.reload/
+
+# ---- Lock / pid ----
+*.pid

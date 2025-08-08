@@ -1,0 +1,55 @@
+{
+  "name": "internal-ai-agent",
+  "displayName": "Internal AI Agent",
+  "description": "Local internal engineering assistant integration",
+  "publisher": "yourpublisher",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.92.0" },
+  "enabledApiProposals": ["chatParticipant"],
+  "categories": ["Other"],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:internalAgent.askSelection"
+  ],
+  "contributes": {
+    "commands": [
+      { "command": "internalAgent.askSelection", "title": "Internal Agent: Ask (Selection or Prompt)" }
+    ],
+    "chatParticipants": [
+      {
+        "id": "querypilot",
+        "name": "querypilot",
+        "description": "Local engineering assistant"
+      }
+    ],
+    "configuration": {
+      "title": "Internal AI Agent",
+      "properties": {
+        "internalAgent.endpoint": {
+          "type": "string",
+            "default": "http://127.0.0.1:8000/chat",
+            "description": "Chat endpoint (POST {message})."
+        },
+        "internalAgent.maxPromptChars": {
+          "type": "number",
+          "default": 8000,
+          "description": "Client-side prompt length cap." 
+        }
+      }
+    }
+  },
+  "main": "./dist/extension.js",
+  "extensionDependencies": [
+    "GitHub.copilot-chat"
+  ],
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.92.0",
+    "esbuild": "^0.20.0"
+  },
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js --sourcemap",
+    "watch": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=dist/extension.js --sourcemap --watch"
+  }
+}
