@@ -1,0 +1,14 @@
+[#] Application configuration (file values overridden by environment variables)
+
+[azure_openai]
+# Azure OpenAI resource endpoint (e.g. "https://my-instance.openai.azure.com")
+endpoint = ""
+# Leave api_key blank; supply via AZURE_OPENAI_KEY env var in production
+api_key = ""
+model = "gpt-4o"
+api_version = "2024-06-01"
+
+[memory]
+enabled = true
+max_messages = 40
+max_tokens = 2400
